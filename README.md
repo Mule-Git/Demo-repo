@@ -1,5 +1,6 @@
-# Demo
+# Demo - project
+
+ * github tutorial
+ * git tutorial
   
   
-  this is first github project
-  go ahead!
