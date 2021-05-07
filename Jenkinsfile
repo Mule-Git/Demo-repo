@@ -1,15 +1,15 @@
 pipeline {
-   agent any
+   agent { docker { image 'python:3.5.1' } }
 
    stages {
       stage('Build') {
          steps {
             echo '------built'
-            sh label: '', script: '/Library/Frameworks/Python.framework/Versions/3.9/bin/python3 -m venv Jenkins_venv_OS'
-            sh label: '', script: 'source Jenkins_venv_OS/bin/activate'
-            sh label: '', script: 'python --version'
-            sh label: '', script: 'pip --version'
-            sh label: '', script: 'pip list'
+            sh '/Library/Frameworks/Python.framework/Versions/3.9/bin/python3 -m venv Jenkins_venv_OS'
+            sh 'source Jenkins_venv_OS/bin/activate'
+            sh 'python --version'
+            sh 'pip --version'
+            sh 'pip list'
          }
       }
       stage('Test') {
