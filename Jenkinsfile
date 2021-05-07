@@ -20,9 +20,7 @@ pipeline {
          steps {
             echo '-----tested'
               sh ''' source Jenkins_venv_OS/bin/activate
-                    pytest /Users/mule/Desktop/Learnings/Learning_Python/python_test_project/tests -v
-
-                   
+                    pytest /Users/mule/Desktop/Learnings/Learning_Python/python_test_project/tests -v      
                 '''
          }
       }
